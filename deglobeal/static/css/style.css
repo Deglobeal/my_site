@@ -1,0 +1,1056 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    justify-content: space-between;
+    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 100%;
+    position: relative; 
+}
+
+/* 🔴 Prevent text overflow */
+.nav-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px; /* Adjust based on nav width */
+}
+
+/* 🔴 Smooth transition for nav items */
+.navi_bar_vertical ul li a {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.navi_bar_vertical {
+    touch-action: pan-y; /* 🔴 Prevent horizontal scroll */
+}
+
+/* Home section */
+.home {
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba( 90,  90, 86);
+    flex: 1; 
+    padding: 0 2rem; 
+    top: 0; 
+    left: 0; 
+}
+/* header section */ 
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    padding: 0 20px; 
+}
+
+.logo {
+    color: #ff5722;
+    text-align: left;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 15px;
+    font-size: clamp(1.2rem, 3vw, 1.5rem); 
+    margin-left: 1rem; 
+}
+
+.logo span { 
+    color: #065fd4;
+    text-align: left;
+    font-size: clamp(2rem, 5vw, 3.125rem); 
+}
+
+/* search section */
+.search-bar {
+    margin: 0 1rem;
+    display: flex;
+    flex-grow: 1; 
+    max-width: 300px; 
+    position: relative; 
+    margin: 0 1rem;
+    flex: 1;
+    max-width: 600px; 
+}
+
+.search-bar input{
+    font-size: 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    flex: 1;
+    width: 100%; 
+    transition: all 0.3s ease; 
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    padding: 0.6rem 3rem 0.6rem 1.5rem; 
+    border: 2px solid transparent;
+}
+
+.search-bar input:hover,
+.search-bar input:focus {
+    border: 2px solid rgb(0 100 0);
+    box-shadow: 0 0 15px rgba(0 100 0 / 0.2);
+}
+
+.search-bar .icon-fad {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem; 
+    transform: translateY(-50%);
+}
+/* end head section */
+
+/* second navigation bar */
+.navi_bar_horizontal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    backdrop-filter: blur(5px);
+}
+
+.navi_bar_horizontal ul  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-left: 25px;
+}
+
+.navi_bar_horizontal ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-right: 10px;
+}
+
+.navi_bar_horizontal ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navi_bar_horizontal ul li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    align-items: center; /* 🔴 Center vertically */
+    padding: 8px 12px !important; /* 🔴 Add right padding */
+    gap: 12px; /* 🔴 Consistent spacing */
+
+}
+.navi_bar_horizontal ul li a:hover {
+    background-color: rgb(0 100 0);
+    transition: all 1s ease;
+    border-radius: 10px;
+}
+
+.navi_bar_horizontal ol li {
+    display: inline;
+    border: 1px solid rgb(0 100 0);
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.navi_bar_horizontal ol li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+.navi_bar_horizontal ol li a:hover {
+    background-color: rgb(0 100 0);
+    transition: all 1s ease;
+    border-radius: 10px;
+}
+
+.navi_bar_horizontal ol li:last-child:hover {
+    background-color: rgb(0 100 0);
+    transition: all 1s ease;
+    border-radius: 10px;
+} 
+/* end second navigation bar */
+
+/* Side navigation bar */
+
+.navi_bar_vertical {
+    width: 43px;
+    display: flex;
+    align-items: flex-start;
+    position: fixed;
+    box-sizing: border-box;
+    height: 100vh;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background-color: rgba( 90,  90, 86);
+    transition: all 1s ease-in-out;
+    z-index:100;
+    overflow: hidden;
+    outline: soild 2px #065fd4;
+    border-right: 2px solid #065fd4;
+}
+
+.navi_bar_vertical:hover {
+    width: 300px;
+    transition: all 1s ease-in-out;
+}
+
+
+.navi_bar_vertical_logo_container{
+    display: flex;
+    justify-content: flex_start;
+    width: 100%; 
+}
+.navi_bar_vertical .navi_bar_vertical_logo img {
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 3px;
+    margin-top: 30px;
+    border: 3px solid rgb(110 99 99);
+}
+
+.navi_bar_vertical .logo {
+    margin-left: 18px;
+    width: 100%;
+}
+
+.navi_bar_vertical .logo h1 {
+    margin-left: 2px;
+    margin-top: 5px;
+    font-size: 40px;
+    transition: opacity 1.5s;
+}
+
+.navi_bar_vertical:hover .logo h1 {
+    opacity: 1; 
+}
+
+.navi_bar_vertical .logo span {
+    font-size: 50px;
+    color: #065fd4;
+}
+
+.navi_bar_vertical ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #065fd4;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin-top: 0px;
+    white-space: nowrap;
+    transition: 1s;
+}
+
+.navi_bar_vertical ul h4 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-left: 43px;
+    white-space: nowrap;
+    transition: 1s;
+}
+
+.navi_bar_vertical ul li {
+    width: 100%;  
+}
+
+.navi_bar_vertical ul li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+    gap: 0 20px;
+    width: 100%;
+    box-sizing: border-box; 
+    overflow: hidden; 
+    transition: 1s; 
+}
+
+.navi_bar_vertical ul li a i {
+    opacity: 1; */ 
+    transition: opacity 1s; 
+    min-width: 24px; /* 🔴 Prevent icon squeezing */
+    text-align: center; /* 🔴 Center icon */
+    margin-left: 2px; /* 🔴 Offset for perfect centering */
+} 
+
+.navi_bar_vertical ul li a span {
+    opacity: 1; 
+    transition: opacity 1s; 
+}
+
+.navi_bar_vertical ul li a:hover {
+    background-color: rgb(0 100 0);
+    transition: 0.5s;
+    border-radius: 10px;
+    width: 282px;
+}
+.navi_bar_vertical:hover ul li a {
+    opacity: 1; 
+}
+/* end Side navigation bar */
+
+/* main section */
+/* login section */
+.wrapper {
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 90px;
+    height: 500px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(95%, 320px) !important; /* 🔴 Safer max-width */
+    padding: 1.5rem 1rem !important; /* 🔴 Ensure internal spacing */
+    overflow: hidden; /* 🔴 Prevent content overflow */
+}
+
+.wrapper.form_box {
+    width: 100%;
+    padding: 10px;
+}
+
+.form_box h2 {
+    margin-top:50px;
+    color: #2ba640;
+    font-size: 2em;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    height: 55px;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+    align-items: center;
+    width: 2750px !important; /* 🔴 Full container width */
+    max-width: 270px; /* 🔴 Prevent overflow */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.input-box label {
+    position: relative;
+    top: 70%;
+    left: 0.2rem; /* 🔴 Match input padding */
+    top:50%;
+    color: #2ba640;
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+    transform: translateY(-50%);
+    font-weight: 400;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 0.3rem;
+    z-index: 1; /* 🔴 Ensure label stays above input */
+}
+
+.input-box input {
+    position: absolute;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    font-weight: 0;
+    padding: 0 1.5rem;
+    width: 80% !important; /* 🔴 Full width of container */
+    padding-right: 2rem !important; /* 🔴 Space for icon */ 
+    z-index: 2; /* 🔴 Keep input above label */
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -3px;
+}
+.input-box input:focus ~ label,
+.input-box input:not(:placeholder-shown) ~ label {
+    top: -10px; /* 🔴 Better vertical position */
+    left: 1rem;
+    font-size: 0.7rem; /* 🔴 Smaller label when active */
+    color: #2ba640;
+    z-index: 3;
+}
+
+/* 🔴 FIXED POSITIONING FOR ALL SCREENS */
+.input-box .icon-fa {
+    position: absolute;
+    right: 0.6rem; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    font-size: 1.1rem; 
+    line-height: 1; 
+    z-index: 1; 
+}
+
+.forgot-remember{
+    font-size: .9em;
+    margin: -15px 0 15px;
+    font-weight: 500;
+    color: #2ba640;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.forgot-remember label input {
+    margin-right: 3px;
+}
+
+.forgot-remember a {
+    color: #2ba640;
+    text-decoration: none;
+}
+
+.forgot-remember a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    background-color: #2ba640;
+    border: none;
+    outline: none;
+    height: 30px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-top: -10px;
+}
+
+.btn:hover {
+    background-color: #45a059;
+}
+
+.btn a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.login-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.login-register p a {
+    color: #2ba640;
+    text-decoration: none;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8; 
+    position: relative; 
+    z-index: 1;
+    bottom: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    body {
+        font-size: 70%; 
+        height: 100vh;
+    }
+
+    .navi_bar_horizontal {
+        display: none; 
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        width: 100%;
+        padding: 0 1.5rem; 
+    }
+
+    .logo {
+        padding: 0;
+        font-weight: bold;
+        margin-top: 5px; 
+        width: auto; 
+        margin-left: 2rem; 
+        font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .logo span {
+        font-size: clamp(1.5rem, 4vw, 2rem); 
+    }
+
+    .search-bar {
+        display: flex;
+        height: auto; 
+        margin: 0 0.5rem; 
+        max-width: 250px; 
+    }
+
+    .search-bar input {
+        width: 180px;  
+        padding: 6px 12px;
+        margin-right: 10px; 
+        font-size: 14px; 
+        padding: 0.5rem 2.5rem 0.5rem 1rem; 
+        width: 100%;
+    }
+
+    .search-bar .icon-fad {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem; 
+    } 
+
+
+    .navi_bar_vertical {
+        width: 43px;
+        height: 100vh;
+        position: fixed;
+        border-right: none;
+        border-bottom: 2px solid #065fd4;
+        display: flex;
+        align-items: center;
+        transition: width 0.3s ease-in-out; 
+    }
+
+    .navi_bar_vertical:hover {
+        width: 200px;
+    }
+
+    .navi_bar_vertical_logo_container {
+        justify-content: flex-start; 
+        width: 100%;
+        display: flex;
+    }
+
+    .navi_bar_vertical .navi_bar_vertical_logo img {
+        margin-top: 10px;
+    }
+
+    .navi_bar_vertical .logo h1 {
+        font-size: 25px;
+        margin-top: 14px;
+        margin-left: -4px;
+    }
+
+    .navi_bar_vertical .logo span {
+        font-size: 35px;
+    }
+
+    .navi_bar_vertical ul {
+        flex-direction: column;
+        white-space: nowrap;
+        justify-content: center;
+    }
+
+    .navi_bar_vertical ul li {
+        width: 100%;
+        margin: 5px;
+        white-space: nowrap;
+    }
+
+    .navi_bar_vertical ul li a:hover {
+        width: 195px;
+    }
+
+    .wrapper {
+        width: 60%;
+        margin: auto; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 750px) {
+    /* Global adjustments */
+    body {
+        font-size: 55%; 
+        line-height: 1.4; 
+        height: auto;
+        min-height: 100vh;
+    }
+
+    /* Header fixes */
+    .header {
+        height: 50px;
+        padding: 0 1rem !important;
+    }
+
+    .logo {
+        margin-left: 1.6rem !important;
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem) !important; 
+        margin-left: 1rem;
+    }
+
+    .logo span {
+        font-size: clamp(1rem, 4.5vw, 1.3rem) !important; 
+    }
+
+    /* Search bar optimization */
+    .search-bar {
+        max-width: 160px; 
+        margin-right: 0.3rem;
+    }
+
+    .search-bar input {
+        padding: 0.3rem 1.8rem 0.3rem 1rem !important; 
+        font-size: 0.7rem !important; 
+    }
+
+    .search-bar .icon-fad {
+        right: 0.7rem !important;
+        font-size: 14px !important; 
+    }
+
+    /* Vertical nav adjustments */
+    .navi_bar_vertical {
+        width: 34px; 
+        z-index: 1000;
+    }
+
+    .navi_bar_vertical:hover {
+        width: 140px; 
+    }
+
+    .navi_bar_vertical ul li a:hover {
+        width: 120px !important; 
+    }
+
+    /* Form positioning fixes */
+    .wrapper {
+        width: min(92%, 320px) !important; 
+        margin: 100px auto 30px !important; 
+        padding: 1.2rem 0.8rem; 
+        position: relative; 
+    }
+
+    .form_box h2 {
+        font-size: clamp(1.1rem, 4vw, 1.3rem) !important; 
+        margin: 0.8rem 0 !important;
+    }
+
+    .input-box {
+        height: 40px !important; 
+        margin: 1.2rem 0 !important;
+    }
+
+    .input-box input {
+        height: 40px !important;
+        width: 90% !important;
+        font-size: 0.7rem !important; 
+    }
+
+    .input-box label {
+        font-size: 0.65rem !important; 
+        transform: translateY(-35%) !important;
+    }
+
+    .btn {
+        height: 36px !important;
+        font-size: 0.8rem !important; 
+    }
+    /* Navigation text */
+    .navi_bar_vertical ul li a {
+        font-size: 0.75rem !important; 
+        padding: 6px 8px !important;
+    }
+
+    .navi_bar_vertical ul h4 {
+        font-size: 0.8rem !important;
+        margin-left: 0.8rem !important;
+    }
+
+    /* Footer adjustments */
+    footer .copyright {
+        font-size: 0.6rem !important;
+        padding: 15px 0;
+    }
+
+    /* Form links */
+    .login-register p {
+        font-size: 0.7rem !important; 
+    }
+
+    /* Touch targets */
+    .navi_bar_horizontal ul li a,
+    .navi_bar_horizontal ol li a {
+        padding: 10px 8px !important; 
+    }
+
+    .forgot-remember {
+        gap: 0.3rem; 
+    }
+
+    .forgot-remember {
+        font-size: 0.7rem !important; 
+        gap: 0.3rem !important; 
+    }
+
+    /* Update existing .forgot-remember rule */
+    .forgot-remember {
+        flex-wrap: wrap;
+        align-items: flex-start; 
+    }
+
+    /* Specific link sizing */
+    .forgot-remember a {
+        font-size: 0.65rem !important; 
+        padding: 2px 0 !important; 
+    }
+
+    /* Checkbox label refinement */
+    .forgot-remember label {
+        font-size: 0.7rem !important; 
+        line-height: 1.3; 
+    }
+
+    /* Checkbox itself */
+    .forgot-remember input[type="checkbox"] {
+        transform: scale(0.8); 
+        margin-right: 2px !important;
+    }
+}
+
+@media (max-width: 750px) {
+    .input-box .icon-fa {
+        right: 0.5rem; /* 🔴 Tighter spacing */
+        font-size: 0.9rem !important; /* 🔴 Smaller icon */
+    }
+    
+    /* 🔴 Specific email icon adjustment */
+    .input-box[data-type="email"] .icon-fa {
+        right: 0.6rem !important;
+    }
+    
+    /* 🔴 Password icon adjustment */
+    .input-box[data-type="password"] .icon-fa {
+        right: 0.55rem !important;
+    }
+}
+
+/* 🔴🔴🔴 400px BREAKPOINT 🔴🔴🔴 */
+@media (max-width: 400px) {
+    /* Global adjustments */
+    body {
+        font-size: 50% !important; /* 🔴 Reduced from 55% */
+        line-height: 1.3; /* 🔴 Tighter line spacing */
+    }
+
+    /* Header adjustments */
+    .header {
+        height: 45px !important; /* 🔴 Smaller header */
+        padding: 0 0.5rem !important;
+    }
+
+    .logo {
+        margin-left: 0.3rem !important;
+        font-size: clamp(0.6rem, 2.2vw, 0.8rem) !important;
+    }
+
+    .logo span {
+        font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+    }
+
+    /* Search bar optimization */
+    .search-bar {
+        max-width: 130px !important;
+        margin-right: 0.2rem;
+    }
+
+    .search-bar input {
+        padding: 0.25rem 1.5rem 0.25rem 0.8rem !important;
+        font-size: 0.65rem !important;
+    }
+
+    .search-bar .icon-fad {
+        right: 0.6rem !important;
+        font-size: 12px !important;
+    }
+
+    /* Vertical navigation */
+    .navi_bar_vertical {
+        width: 30px !important; /* 🔴 Ultra-slim nav */
+    }
+
+    .navi_bar_vertical:hover {
+        width: 120px !important;
+    }
+
+    .navi_bar_vertical ul li a:hover {
+        width: 110px !important;
+    }
+    .navi_bar_vertical ul li a {
+        padding: 6px 8px !important; /* 🔴 Tighter spacing */
+        gap: 8px; /* 🔴 Reduced gap */
+    }
+
+    .navi_bar_vertical ul li a i {
+        font-size: 16px !important; /* 🔴 Fixed icon size */
+        min-width: 20px; /* 🔴 Smaller minimum width */
+    }
+
+
+    /* Form adjustments */
+    .wrapper {
+        width: min(95%, 280px) !important;
+        margin: 80px auto 20px !important;
+        padding: 1rem 0.8rem !important; /* 🔴 Reduced padding */
+        border-radius: 15px !important; /* 🔴 Smaller radius */
+    }
+
+    .form_box h2 {
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
+        margin: 0.5rem 0 !important; /* 🔴 Reduced spacing */
+    }
+
+    .input-box {
+        height: 36px !important;
+        margin: 1rem 0 !important;
+    }
+
+    .input-box input {
+        height: 36px !important;
+        font-size: 0.65rem !important;
+    }
+
+    .input-box label {
+        font-size: 0.6rem !important;
+        transform: translateY(-40%) !important;
+        max-width: 100%; /* 🔴 Full width */
+        margin: 1rem 0 !important; /* 🔴 Consistent spacing */
+    }
+
+    /* 🔴 Remember me & Forgot password fixes */
+    .forgot-remember {
+        font-size: 0.6rem !important; /* 🔴 Reduced from 0.7rem */
+        gap: 0.2rem !important;
+    }
+
+    .forgot-remember a {
+        font-size: 0.6rem !important; /* 🔴 Match parent size */
+    }
+
+    .forgot-remember input[type="checkbox"] {
+        transform: scale(0.7); /* 🔴 Smaller checkbox */
+        margin-right: 1px !important;
+    }
+
+    /* Button adjustments */
+    .btn {
+        height: 32px !important;
+        font-size: 0.75rem !important;
+        margin-top: 0.5rem !important; /* 🔴 Better button spacing */
+    }
+
+    /* Footer text */
+    footer .copyright {
+        font-size: 0.55rem !important;
+        padding: 10px 0;
+    }
+}
+
+/* 🔴🔴🔴 360px BREAKPOINT 🔴🔴🔴 */
+@media (max-width: 360px) {
+    /* Global Reset */
+    body {
+        font-size: 45% !important; /* 🔴 Extreme text reduction */
+        line-height: 1.25; /* 🔴 Tight but readable spacing */
+        min-height: 100vh; /* 🔴 Critical for mobile layout */
+    }
+
+    /* Header Emergency Fixes */
+    .header {
+        height: 40px !important; /* 🔴 Ultra-compact header */
+        padding: 0 0.3rem !important;
+    }
+
+    .logo {
+        margin-left: 0.2rem !important;
+        font-size: clamp(0.5rem, 2vw, 0.7rem) !important; /* 🔴 Minimum viable size */
+    }
+
+    .logo span {
+        font-size: clamp(0.7rem, 3.5vw, 1rem) !important; /* 🔴 Prevent logo break */
+    }
+
+    /* Search Bar Survival Mode */
+    .search-bar {
+        max-width: 100px !important; /* 🔴 Absolute minimum */
+        margin-right: 0.1rem;
+    }
+
+    .search-bar input {
+        padding: 0.2rem 1.2rem 0.2rem 0.6rem !important;
+        font-size: 0.6rem !important; /* 🔴 Minimum readable size */
+    }
+
+    .search-bar .icon-fad {
+        right: 0.5rem !important;
+        font-size: 10px !important; /* 🔴 Tiny but visible */
+    }
+
+    /* Vertical Nav Micro-Adjustments */
+    .navi_bar_vertical {
+        width: 28px !important; /* 🔴 Slimmest possible */
+    }
+
+    .navi_bar_vertical:hover {
+        width: 110px !important; /* 🔴 Compact expansion */
+    }
+
+    .navi_bar_vertical ul li a {
+        padding: 4px 6px !important; /* 🔴 Minimum spacing */
+        gap: 6px !important; /* 🔴 Tight icon-text gap */
+    }
+
+    .navi_bar_vertical ul li a i {
+        min-width: 16px !important; /* 🔴 Prevent icon collapse */
+        font-size: 14px !important; /* 🔴 Fixed icon sizing */
+    }
+
+    /* Form Emergency Containment */
+    .wrapper {
+        width: 95% !important; /* 🔴 Full utilization */
+        max-width: 260px !important;
+        margin: 60px auto 15px !important; /* 🔴 Top space reduction */
+        padding: 0.8rem !important; /* 🔴 Minimal padding */
+        border-radius: 12px !important; /* 🔴 Space-saving shape */
+    }
+
+    .form_box h2 {
+        font-size: 1rem !important; /* 🔴 Critical reduction */
+        margin: 0.3rem 0 !important;
+    }
+
+    .input-box {
+        height: 32px !important; /* 🔴 Slimmest usable height */
+        margin: 0.8rem 0 !important;
+        width: 90% !important; /* 🔴 Reduced from 100% */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input-box input {
+        height: 32px !important;
+        font-size: 0.6rem !important; /* 🔴 Minimum readable */
+        padding: 0 1.5rem 0 0.5rem !important; /* 🔴 Space management */
+        width: 95% !important; /* 🔴 Tightened width */
+    }
+
+    .input-box label {
+        font-size: 0.55rem !important; /* 🔴 Microscopic but legible */
+        right: 0.8rem !important; /* 🔴 Adjusted position */
+        transform: translateY(-50%) scale(0.8); /* 🔴 Smaller icon */
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:not(:placeholder-shown) ~ label {
+        left: 0.5rem !important;
+        transform: translateY(-100%) scale(0.8); /* 🔴 Final position */
+    }
+    /* Authentication Micro-Text */
+    .forgot-remember {
+        font-size: 0.55rem !important; /* 🔴 Absolute minimum */
+        gap: 0.15rem !important;
+    }
+
+    .forgot-remember a {
+        font-size: 0.55rem !important;
+    }
+
+    .forgot-remember input[type="checkbox"] {
+        transform: scale(0.6); /* 🔴 Smallest possible */
+        margin-right: 0px !important;
+    }
+
+    /* Button Compression */
+    .btn {
+        height: 28px !important; /* 🔴 Minimum tap target */
+        font-size: 0.7rem !important;
+    }
+
+    /* Footer Survival */
+    footer .copyright {
+        font-size: 0.5rem !important; /* 🔴 Legal minimum */
+        padding: 8px 0;
+    }
+
+    /* 🔴 Emergency Overflow Prevention */
+    .navi_bar_vertical ul h4 {
+        display: none !important; /* 🔴 Remove section headers */
+    }
+
+    .navi_bar_vertical ul li a span {
+        max-width: 80px; /* 🔴 Text truncation */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .input-box label {
+        left: 1rem;
+        font-size: 0.7rem; /* 🔴 Smaller base size */
+    }
+    
+    .input-box input:focus ~ label,
+    .input-box input:not(:placeholder-shown) ~ label {
+        top: -8px; /* 🔴 Adjusted for mobile */
+        font-size: 0.6rem; /* 🔴 Tiny but readable */
+        left: 0.8rem;
+    }
+    
+    .input-box .icon-fa {
+        right: 0.5rem !important;
+        font-size: 0.8rem !important; /* 🔴 Proper icon scaling */
+    }
+}
+
