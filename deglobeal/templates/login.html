@@ -128,6 +128,7 @@
     <!--form for the login section-->
         <div class="wrapper">
             <div class="form_box">
+            {% block content %} <!--test google login-->
             <h2>Login</h2>
             
             {% if messages %}
@@ -153,6 +154,12 @@
                 </div>
                 <div class="input-box">
                     <button type="submit" class="btn">Login</button>
+                </div>
+                <div>
+                <p>Or log in with:</p>
+                <a href="{% url 'social:begin' 'google-oauth2' %}">Google</a><!--test area-->
+                <a href="{% url 'social:begin' 'facebook' %}">Facebook</a><!--test area-->
+            {% endblock %}  <!--test area-->
                 </div>
                 <div class="login-register">
                     <p>Don't have an account? <a href="/sign_up" class="register-link">Sign Up</a></p>
